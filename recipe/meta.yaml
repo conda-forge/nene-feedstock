@@ -1,5 +1,5 @@
 {% set name = "nene" %}
-{% set version = "0.4.1" %}
+{% set version = "0.5.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/nene-{{ version }}.tar.gz
-  sha256: 3ef416ab853202322162f39e8d53ae4aee9f7105714f3608a05095a12a5b1100
+  sha256: 8bd155a86e233080a627fee0e027b5ea7df12db958ca44c3ce3ee380a4c7407a
 
 build:
   number: 0
@@ -26,7 +26,8 @@ requirements:
     - click >=8
     - jinja2 >=3.0
     - livereload >=2.6
-    - myst-parser >=0.15.0
+    - markdown-it-py >=2.0
+    - mdit-py-plugins >=0.3
     - python >=3.6
     - pyyaml >=5.4
     - rich >=10.9
