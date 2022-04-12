@@ -1,5 +1,5 @@
 {% set name = "nene" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/nene-{{ version }}.tar.gz
-  sha256: ce04e0612c1b37e8eefef8b13d5b8eca58d03234fce3f17fc0b194c544f0679d
+  sha256: 3ef416ab853202322162f39e8d53ae4aee9f7105714f3608a05095a12a5b1100
 
 build:
   number: 0
