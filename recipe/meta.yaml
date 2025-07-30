@@ -1,5 +1,5 @@
 {% set name = "nene" %}
-{% set version = "0.9.0" %}
+{% set version = "0.10.0" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/nene-{{ version }}.tar.gz
-  sha256: 2c2b7dfd128d8935b03a5bcc84fdb5dd725578243578e96338f5105a6325b95c
+  sha256: 5f37ef9dfbd6dd24e969bfb6bbe3b365e31ec0d82805e9cbf2ef06a364de5ab6
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - nene = nene.cli:main
@@ -19,9 +19,11 @@ build:
 
 requirements:
   host:
-    - pip
     - python {{ python_min }}
-    - setuptools-scm
+    - setuptools >=45
+    - wheel
+    - setuptools-scm >=6.2
+    - pip
   run:
     - python >={{ python_min }}
     - click >=8
@@ -29,8 +31,9 @@ requirements:
     - livereload >=2.6
     - markdown-it-py >=2.0
     - mdit-py-plugins >=0.3
-    - pyyaml >=5.4
+    - pyyaml >=6.0
     - rich >=10.9
+    - pygments >=2.17
 
 test:
   imports:
