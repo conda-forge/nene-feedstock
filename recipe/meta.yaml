@@ -19,9 +19,11 @@ build:
 
 requirements:
   host:
-    - pip
     - python {{ python_min }}
-    - setuptools-scm
+    - setuptools >=45
+    - wheel
+    - setuptools-scm >=6.2
+    - pip
   run:
     - python >={{ python_min }}
     - click >=8
@@ -29,8 +31,9 @@ requirements:
     - livereload >=2.6
     - markdown-it-py >=2.0
     - mdit-py-plugins >=0.3
-    - pyyaml >=5.4
+    - pyyaml >=6.0
     - rich >=10.9
+    - pygments >=2.17
 
 test:
   imports:
@@ -38,6 +41,7 @@ test:
   commands:
     - pip check
     - nene --help
+    - cd doc && nene
   requires:
     - pip
     - python {{ python_min }}
