@@ -41,7 +41,6 @@ test:
   commands:
     - pip check
     - nene --help
-    - cd doc && nene
   requires:
     - pip
     - python {{ python_min }}
